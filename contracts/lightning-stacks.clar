@@ -190,6 +190,8 @@
     )
     ;; Validate inputs
     (asserts! (is-valid-channel-id channel-id) ERR-INVALID-INPUT)
+    (asserts! (is-valid-deposit balance-a) ERR-INVALID-INPUT)
+    (asserts! (is-valid-deposit balance-b) ERR-INVALID-INPUT)
     (asserts! (is-valid-signature signature-a) ERR-INVALID-INPUT)
     (asserts! (is-valid-signature signature-b) ERR-INVALID-INPUT)
     (asserts! (not (is-eq tx-sender participant-b)) ERR-INVALID-INPUT)
